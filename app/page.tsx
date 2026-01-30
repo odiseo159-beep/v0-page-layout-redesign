@@ -73,16 +73,32 @@ export default function Page() {
 
   return (
     <div className="min-h-screen bg-yellow-400 text-slate-900 relative">
-      {/* Subtle paw print pattern overlay */}
-      <div 
-        className="absolute inset-0 opacity-10"
-        style={{
-          backgroundImage: `radial-gradient(circle at 20% 30%, #1e293b 2px, transparent 2px),
-                           radial-gradient(circle at 80% 70%, #1e293b 2px, transparent 2px),
-                           radial-gradient(circle at 50% 50%, #1e293b 1.5px, transparent 1.5px)`,
-          backgroundSize: '100px 100px'
-        }}
-      />
+      {/* Cat paw print pattern overlay */}
+      <svg className="absolute inset-0 w-full h-full opacity-10" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="pawPattern" x="0" y="0" width="120" height="120" patternUnits="userSpaceOnUse">
+            {/* Paw print 1 */}
+            <g transform="translate(20, 20)">
+              {/* Main pad */}
+              <ellipse cx="15" cy="20" rx="10" ry="12" fill="#1e293b" />
+              {/* Toe pads */}
+              <ellipse cx="8" cy="8" rx="4" ry="5" fill="#1e293b" />
+              <ellipse cx="15" cy="5" rx="4" ry="5" fill="#1e293b" />
+              <ellipse cx="22" cy="8" rx="4" ry="5" fill="#1e293b" />
+              <ellipse cx="25" cy="15" rx="3.5" ry="4.5" fill="#1e293b" />
+            </g>
+            {/* Paw print 2 (rotated) */}
+            <g transform="translate(70, 70) rotate(25)">
+              <ellipse cx="15" cy="20" rx="9" ry="11" fill="#1e293b" />
+              <ellipse cx="8" cy="8" rx="3.5" ry="4.5" fill="#1e293b" />
+              <ellipse cx="15" cy="5" rx="3.5" ry="4.5" fill="#1e293b" />
+              <ellipse cx="22" cy="8" rx="3.5" ry="4.5" fill="#1e293b" />
+              <ellipse cx="25" cy="15" rx="3" ry="4" fill="#1e293b" />
+            </g>
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#pawPattern)" />
+      </svg>
       
       {/* Content */}
       <div className="relative z-10 pt-8">
