@@ -205,8 +205,11 @@ export default function Page() {
                 <iframe
                   src="https://amica-importer--ethshilder.replit.app/"
                   className="w-full h-full border-0"
-                  allow="microphone; camera; autoplay"
+                  allow="microphone; camera; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
+                  sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-modals allow-downloads"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  loading="eager"
                 />
 
                 <div className="absolute top-4 right-4 flex gap-2 z-10">
