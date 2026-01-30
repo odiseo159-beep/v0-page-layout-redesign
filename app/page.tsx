@@ -176,8 +176,8 @@ export default function Page() {
             </div>
           </div>
 
-          {/* Middle Section: Stream + Chat + Actions */}
-          <div className="grid grid-cols-[1fr_360px_300px] gap-8">
+          {/* Middle Section: Stream + Chat */}
+          <div className="grid grid-cols-[1fr_360px] gap-8 mb-8">
             {/* Stream Area */}
             <div
               className="relative group"
@@ -345,38 +345,39 @@ export default function Page() {
               </div>
             </div>
 
-            {/* Action Panel - BLACK CONTAINERS */}
-            <div className="space-y-6">
-              {/* Trade Section */}
-              <div className="p-6 rounded-3xl bg-slate-950 shadow-xl space-y-5">
-                <div className="flex items-center justify-between">
-                  <span className="text-base text-white font-bold">TRADE</span>
-                  <Info className="w-5 h-5 text-amber-400" />
-                </div>
-                <div className="flex flex-col gap-3">
-                  <Button className="w-full bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold text-base py-3 rounded-full shadow-[0_0_20px_rgba(251,191,36,0.4)]">
-                    <Heart className="w-5 h-5 mr-2 fill-current" />
-                    BUY
-                  </Button>
-                  <Button
-                    variant="outline"
-                    className="w-full border-2 border-slate-700 hover:border-amber-400 hover:text-amber-400 font-bold bg-transparent text-white text-base py-3 rounded-full transition-colors"
-                  >
-                    <Minus className="w-5 h-5 mr-2" />
-                    SELL
-                  </Button>
-                </div>
-              </div>
+          </div>
 
-              {/* Subscribe Section */}
-              <div className="p-6 rounded-3xl bg-slate-950 shadow-xl space-y-4">
-                <span className="text-base text-white font-bold block">SUBSCRIBE</span>
-                <Button className="w-full bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold text-base py-3 rounded-full shadow-[0_0_20px_rgba(251,191,36,0.4)]">
-                  <ExternalLink className="w-5 h-5 mr-2" />
-                  JOIN NOW
-                </Button>
-                <p className="text-xs text-center text-slate-400">Unlock exclusive chats & features</p>
+          {/* Bottom Section: Trade + Subscribe - BLACK CONTAINERS */}
+          <div className="grid grid-cols-2 gap-8 max-w-[800px] mx-auto">
+            {/* Trade Section */}
+            <div className="p-6 rounded-3xl bg-slate-950 shadow-xl space-y-5">
+              <div className="flex items-center justify-between">
+                <span className="text-base text-white font-bold">TRADE</span>
+                <Info className="w-5 h-5 text-amber-400" />
               </div>
+              <div className="flex flex-col gap-3">
+                <Button className="w-full bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold text-base py-3 rounded-full shadow-[0_0_20px_rgba(251,191,36,0.4)]">
+                  <Heart className="w-5 h-5 mr-2 fill-current" />
+                  BUY
+                </Button>
+                <Button
+                  variant="outline"
+                  className="w-full border-2 border-slate-700 hover:border-amber-400 hover:text-amber-400 font-bold bg-transparent text-white text-base py-3 rounded-full transition-colors"
+                >
+                  <Minus className="w-5 h-5 mr-2" />
+                  SELL
+                </Button>
+              </div>
+            </div>
+
+            {/* Subscribe Section */}
+            <div className="p-6 rounded-3xl bg-slate-950 shadow-xl space-y-4">
+              <span className="text-base text-white font-bold block">SUBSCRIBE</span>
+              <Button className="w-full bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold text-base py-3 rounded-full shadow-[0_0_20px_rgba(251,191,36,0.4)]">
+                <ExternalLink className="w-5 h-5 mr-2" />
+                JOIN NOW
+              </Button>
+              <p className="text-xs text-center text-slate-400">Unlock exclusive chats & features</p>
             </div>
           </div>
         </div>
